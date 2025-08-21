@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: go-csxjygwl-gitops
+  description: This is GitOps manifest for go-csxjygwl   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=go-csxjygwl
+    backstage.io/kubernetes-id: go-csxjygwl 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: rhtap-rhdh-qe/go-csxjygwl-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:go-csxjygwl
